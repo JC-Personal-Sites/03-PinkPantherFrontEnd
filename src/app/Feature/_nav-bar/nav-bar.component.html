@@ -1,0 +1,48 @@
+<mat-toolbar id="navBar-Main">
+  <nav id="navBar-Left">
+    <a routerLink="/home" routerLinkActive="active">
+      {{ title }}
+    </a>
+  </nav>
+  <nav id="navBar-Right">
+    <!-- Menu alter in relation to screen size -->
+
+    <!-- Standard Menu -->
+    <div class="standardMenu">
+      <a routerLink="/home" routerLinkActive="active" title="Home">Home</a>
+      <a routerLink="/gallery" routerLinkActive="active" title="Gallery"
+        >Gallery</a
+      >
+      <a routerLink="/history" routerLinkActive="active" title="History"
+        >History</a
+      >
+      <a routerLink="/about" routerLinkActive="active" title="About">About</a>
+      <a routerLink="/appendix" routerLinkActive="active" title="Appendix"
+        >Appendix</a
+      >
+    </div>
+
+    <!-- Collapsed Menu -->
+    <div class="hamburgerMenu">
+      <button mat-button [matMenuTriggerFor]="menu">
+        <fa-icon [icon]="faBars" id="barsIcon"></fa-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="/home" title="Home">Home</button>
+        <button mat-menu-item routerLink="/gallery" title="Gallery">
+          Gallery
+        </button>
+        <button mat-menu-item routerLink="/history" title="History">
+          History
+        </button>
+        <button mat-menu-item routerLink="/about" title="About">About</button>
+      </mat-menu>
+    </div>
+    <i (click)="openUserModal()" title="User" class="userIcon">
+      <fa-icon [icon]="faPaw" id="pawIcon"></fa-icon>
+    </i>
+  </nav>
+</mat-toolbar>
+<div>
+  <router-outlet></router-outlet>
+</div>

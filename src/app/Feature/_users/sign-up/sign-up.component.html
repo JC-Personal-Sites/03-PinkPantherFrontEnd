@@ -1,0 +1,101 @@
+<h1 mat-dialog-title>Create Account</h1>
+<form class="signUp-form">
+  <mat-dialog-content>
+    <table class="signUp-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <mat-form-field class="signUp-full-width" appearance="fill">
+            <mat-label>First Name</mat-label>
+            <input matInput required />
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="signUp-full-width" appearance="fill">
+            <mat-label>Last Name</mat-label>
+            <input matInput required />
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <mat-form-field class="signUp-full-width" appearance="fill">
+            <mat-label>Email</mat-label>
+            <input
+              type="email"
+              matInput
+              required
+              [formControl]="emailSignUpFormControl"
+              placeholder="Ex. pat@example.com"
+            />
+            <mat-error
+              *ngIf="
+                emailSignUpFormControl.hasError('email') &&
+                !emailSignUpFormControl.hasError('required')
+              "
+            >
+              Please enter a valid email address
+            </mat-error>
+            <mat-error *ngIf="emailSignUpFormControl.hasError('required')">
+              Email is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <mat-form-field class="signUp-full-width" appearance="fill">
+            <mat-label>Password</mat-label>
+            <input
+              type="password"
+              matInput
+              required
+              [formControl]="passwordSignUpFormControl"
+            />
+            <mat-error *ngIf="!passwordSignUpFormControl.hasError('required')">
+              Please enter a valid password address
+            </mat-error>
+            <mat-error *ngIf="passwordSignUpFormControl.hasError('required')">
+              Password is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="2">
+          <mat-form-field class="signUp-full-width" appearance="fill">
+            <mat-label>Address 1</mat-label>
+            <input matInput required />
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <mat-form-field class="signUp-full-width" appearance="fill">
+            <mat-label>Address 2</mat-label>
+            <input matInput />
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <mat-form-field class="signUp-full-width" appearance="fill">
+            <mat-label>City</mat-label>
+            <input matInput required />
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="signUp-full-width" appearance="fill">
+            <mat-label>Postal Code</mat-label>
+            <input matInput #postalCode maxlength="7" required />
+            <mat-hint align="end">{{ postalCode.value.length }} / 7</mat-hint>
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+  </mat-dialog-content>
+
+  <mat-dialog-actions class="signUpButton">
+    <button mat-dialog-close class="btn btn-success">Create Account</button>
+  </mat-dialog-actions>
+</form>

@@ -1,0 +1,40 @@
+#navBar-Main {
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5vh;
+  background: transparent;
+}
+
+::ng-deep .mat-ink-bar {
+  background-color: #b61588 !important;
+}
+
+::ng-deep .mat-tab-label {
+  color: #fa8ab0 !important;
+  opacity: 1 !important;
+}
+
+::ng-deep .mat-tab-label:hover {
+  color: #d372b7 !important;
+}
+
+::ng-deep .mat-tab-label-active {
+  color: #b61588 !important;
+}
+
+.galleryIcon {
+  color: #fa8ab0;
+  font-size: 1.5em;
+  margin-right: 4vw;
+}
+
+.galleryIcon:hover {
+  color: #d372b7;
+  cursor: pointer;
+}
+
+.activeItem {
+  color: #b61588;
+}

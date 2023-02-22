@@ -1,0 +1,36 @@
+.user-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  /* display: flex; */
+}
+
+.user-full-width {
+  width: 100%;
+  padding-top: 2em;
+}
+
+.userButtons {
+  float: right;
+}
+
+.userNewAccount {
+  padding-bottom: 2em;
+}
+.userNewAccount p {
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+}
+
+.userNewAccount p input {
+  border: none;
+  background: transparent;
+  text-decoration: none;
+  cursor: pointer;
+  color: blue;
+}
+
+.userNewAccount p input:hover {
+  text-decoration: underline;
+}
