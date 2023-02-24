@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "route": "homePage",
+    "title": "<h3>Site about the history of</h3><h1>The Pink Panther</h1>"
+  },
+  {
+    "id": 2,
+    "route": "about",
+    "title": "<h1>About</h1>"
+  },
+  {
+    "id": 3,
+    "route": "history",
+    "title": "<h1>History</h1>"
+  },
+  {
+    "id": 4,
+    "route": "gallery",
+    "title": "<h1>Gallery</h1>"
+  },
+  {
+    "id": 5,
+    "route": "appendix",
+    "title": "<h1>Appendix</h1>"
+  }
+]
