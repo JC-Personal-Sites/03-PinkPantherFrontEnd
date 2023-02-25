@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import { faFacebookF,faYoutube,faWikipediaW,faTwitter} from '@fortawesome/free-brands-svg-icons';
 import { faVolumeUp } from '@fortawesome/free-solid-svg-icons';
 
@@ -15,10 +16,6 @@ export class PagesComponent {
   faWikipediaW = faWikipediaW;
   faTwitter = faTwitter;
   faVolumeUp = faVolumeUp;
-
-  constructor() {}
-
-  ngOnInit(): void {}
 
   playSoundTrack() {
     if (this.a == 0) {
