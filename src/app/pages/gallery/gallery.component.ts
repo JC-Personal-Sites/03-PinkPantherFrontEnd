@@ -11,10 +11,6 @@ import { GalleryServiceService } from './_Services/gallery-service.service';
 export class GalleryComponent implements OnInit {
   faVideo = faVideo;
   faImage = faImage;
-  links = [
-    { tabName: 'Gallery 1', path: 'gallery1' },
-    { tabName: 'Gallery 2', path: 'gallery2' },
-  ];
   imageStatus: boolean = true;
   videoStatus: boolean = false;
 

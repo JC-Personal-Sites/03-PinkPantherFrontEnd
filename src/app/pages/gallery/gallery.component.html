@@ -1,36 +1,10 @@
-<mat-toolbar id="navBar-Main">
+<mat-toolbar id="navBar-Main" class="d-flex justify-content-center">
   <nav id="navBar-Left">
-    <nav mat-tab-nav-bar>
-      <a
-        mat-tab-link
-        *ngFor="let link of links"
-        [routerLink]="[link.path]"
-        routerLinkActive
-        #rla="routerLinkActive"
-        [active]="rla.isActive"
-        >{{ link.tabName }}
-      </a>
-    </nav>
-  </nav>
-  <nav id="navBar-Right">
-    <i
-      (click)="iconEvent()"
-      [ngClass]="imageStatus ? 'activeItem' : ''"
-      class="galleryIcon"
-      title="galleryIcon"
-    >
+    <i (click)="iconEvent()" [ngClass]="imageStatus ? 'activeItem' : ''" class="galleryIcon" title="imageIcon">
       <fa-icon [icon]="faImage" id="imageIcon"></fa-icon>
     </i>
-    <i
-      (click)="iconEvent()"
-      [ngClass]="videoStatus ? 'activeItem' : ''"
-      class="galleryIcon"
-      title="galleryIcon"
-    >
+    <i (click)="iconEvent()" [ngClass]="videoStatus ? 'activeItem' : ''" class="galleryIcon" title="videoIcon">
       <fa-icon [icon]="faVideo" id="videoIcon"></fa-icon>
     </i>
   </nav>
 </mat-toolbar>
-<div>
-  <router-outlet></router-outlet>
-</div>

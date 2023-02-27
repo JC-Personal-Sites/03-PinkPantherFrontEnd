@@ -1,8 +1,9 @@
 export interface I_Appendix {
+  _id: string;
   id: number;
-  Reference: string;
-  Link: string;
-  Comments?: string;
-  Type: 'Documentation' | 'Video';
-  Topic: 'TypeScript' | 'Testing' | 'JavaScript' | 'Data' | 'Angular';
+  reference: string;
+  link: string;
+  comments?: string;
+  type: 'Documentation' | 'Video';
+  topic: 'TypeScript' | 'Testing' | 'JavaScript' | 'Data' | 'Angular';
 }

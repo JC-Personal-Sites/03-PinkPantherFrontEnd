@@ -10,6 +10,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatTableModule } from '@angular/material/table';
 
 const modules = [
   MatToolbarModule,
@@ -23,6 +24,7 @@ const modules = [
   MatIconModule,
   MatMenuModule,
   MatTabsModule,
+  MatTableModule
 ];
 
 @NgModule({

@@ -6,7 +6,6 @@ import { AboutComponent } from './pages/about/about.component';
 import { HistoryComponent } from './pages/history/history.component';
 import { AppendixComponent } from './pages/appendix/appendix.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
-import { CarouselComponent } from './pages/gallery/carousel/carousel.component';
 import { PageNotFoundComponent } from './pages/_globals/_page-not-found/page-not-found.component';
 
 const routes: Routes = [
@@ -14,13 +13,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'history', component: HistoryComponent },
   { path: 'appendix', component: AppendixComponent },
-  {
-    path: 'gallery',
-    component: GalleryComponent,
-    children: [
-      { path: 'Carousel', component: CarouselComponent },
-    ],
-  },
+  { path: 'gallery', component: GalleryComponent },
 
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },

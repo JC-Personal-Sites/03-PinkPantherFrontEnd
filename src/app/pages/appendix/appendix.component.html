@@ -1,4 +1,29 @@
 <h2 class="globalHeader">{{ title }}</h2>
-<mat-card class="tabPractice">
-  <div id="inner-table"></div>
-</mat-card>
+<div *ngIf="rowData">
+  <mat-card class="tabPractice">
+    <table mat-table [dataSource]="rowData" class="mat-elevation-z8">
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>id</th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+      <ng-container matColumnDef="reference">
+        <th mat-header-cell *matHeaderCellDef>Reference</th>
+        <td mat-cell *matCellDef="let element"> <a [href]="element.link" target="_blank">{{element.reference}}</a> </td>
+      </ng-container>
+      <ng-container matColumnDef="topic">
+        <th mat-header-cell *matHeaderCellDef>Topic</th>
+        <td mat-cell *matCellDef="let element"> {{element.topic}} </td>
+      </ng-container>
+      <ng-container matColumnDef="comments">
+        <th mat-header-cell *matHeaderCellDef>Comments</th>
+        <td mat-cell *matCellDef="let element"> {{element.comments}} </td>
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </mat-card>
+  <div style="height: 1px;">
+  </div>
+</div>
+
