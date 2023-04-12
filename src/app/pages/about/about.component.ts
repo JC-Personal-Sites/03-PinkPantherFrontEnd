@@ -13,8 +13,8 @@ export class AboutComponent implements OnInit {
 
   ngOnInit(): void {
     this.httpAboutService.getWikiPedia().subscribe((response) => {
-      console.log(response.parse);
-      this.returnText = response.parse
+      console.log(response.extract);
+      this.returnText = response.extract
     })
 
     // fetch('https://en.wikipedia.org/w/api.php?action=parse&page=Pet_door&format=json&origin=*')
