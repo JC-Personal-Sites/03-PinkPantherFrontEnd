@@ -1,1 +1,11 @@
-<p>page works!</p>
+<!-- Standard Menu -->
+<nav *ngIf="rowData" id="navBar-Main">
+  <div class="standardMenu">
+    @for (nav of rowData; track nav) {
+    <a [routerLink]="nav.link" routerLinkActive="active" [title]="nav.title">{{
+      nav.title
+    }}</a>
+    }
+  </div>
+</nav>
+<!-- <router-outlet></router-outlet> -->

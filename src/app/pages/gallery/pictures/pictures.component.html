@@ -1,0 +1,6 @@
+<div class="standardMenu">
+  <input type="text" (input)="filterResult($event)" />
+  @for (picture of rowData; track picture) {
+  <p>{{ picture.title }}</p>
+  }
+</div>

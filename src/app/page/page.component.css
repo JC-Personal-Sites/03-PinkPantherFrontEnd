@@ -1,0 +1,28 @@
+a {
+  cursor: pointer;
+}
+
+#navBar-Main {
+  background-color: #fa8ab0;
+  border: 3px solid #b61588;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#navBar-Main a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5em;
+}
+
+#navBar-Main a:hover {
+  color: #d372b7;
+}
+
+#navBar-Main a.active {
+  color: #b61588;
+}
+
+.standardMenu {
+  display: inline;
+}
